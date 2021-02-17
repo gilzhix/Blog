@@ -1,6 +1,12 @@
 /*colors 
-color: #47cfac (aguamarina)
+color :  #790c5a morado
+color : #cc0e74 rosado
+color: #e6739f rosa pastel
+color: #f1d4d4 rosablanco
 */
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -9,11 +15,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    background-color:#f1d4d4;
+   
 }
 a {
     text-decoration: none;
     display: inline;
-    color:black;
+    color:#f1d4d4;
 }
 header {
     width: 100%;
@@ -25,7 +33,7 @@ header .header-icons-container {
     width: 100%;
     height: 50px;
     display: grid;
-    background-color: #47cfac;
+    background-color: #790c5a;
 }
 header .header-icons-container .icons {
     width: 300px;
@@ -38,5 +46,100 @@ header .header-icons-container .icons {
     margin-right: 50px;
 }
 header .icons span {
-    color: white;
+    color: 1b1b2f;
 }
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90PX;
+    /* background-color: #6639a6; */
+}
+nav .nav-logo-container{
+    margin-left: 50px;
+}
+nav .nav-logo-container img{
+    width: 220px;
+    margin-top: 10px;
+}
+nav .nav-profile-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+nav .nav-profile-link a{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px ;
+    color: white;
+    border-bottom: 1px solid white;
+}
+body .main-fondo{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/img/bigstock-Real-Python-Code-Developing-Sc-217216555-630x421.jpg);
+}
+main {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Long Cang', cursive;
+    color: hsl(218, 84%, 90%);
+    line-height: 1.2rem;
+}
+main .card {
+    margin-top: 200px;
+    padding: 2rem;
+    width: 500px;
+    height: auto;
+    border: 3px solid;
+    border-image: linear-gradient(
+      135deg,
+      hsl(330, 100%, 38%),
+      hsl(222, 99%, 100%),
+      hsl(330, 100%, 38%)
+    ) 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+main .card p{
+    border-right: solid 4px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 20px;
+  color: white;
+}
+/* Animation */
+.card p {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
+main .card a {
+    
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    margin-top: 10px;
+    font-family: 'Source Code Pro', monospace;  
+    padding: 0.5rem 1rem;
+    border: solid 1px  hsl(330, 100%, 38%);
+    color: hsl(218, 84%, 90%);
+    text-decoration: none;
