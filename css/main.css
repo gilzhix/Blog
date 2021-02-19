@@ -113,6 +113,25 @@ main .card p{
   font-size: 20px;
   color: white;
 }
+.blogs-main {
+    display: grid;
+}
+.blogs-news-container {
+    background-color: #cc0e74;
+    padding: 0 50px 40px;
+    width: 100%;
+}
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+.blogs-news-img-container{
+    grid-column: 1;
+}
+
+
+
 /* Animation */
 .card p {
     animation: animated-text 4s steps(29,end) 1s 1 normal both,
@@ -143,3 +162,4 @@ main .card a {
     border: solid 1px  hsl(330, 100%, 38%);
     color: hsl(218, 84%, 90%);
     text-decoration: none;
+    }
