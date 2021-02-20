@@ -15,7 +15,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:#f1d4d4;
+    background-color: #3d3d3d;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
    
 }
 a {
@@ -33,7 +35,7 @@ header .header-icons-container {
     width: 100%;
     height: 50px;
     display: grid;
-    background-color: #790c5a;
+    background-color: #8D07F6;
 }
 header .header-icons-container .icons {
     width: 300px;
@@ -46,7 +48,7 @@ header .header-icons-container .icons {
     margin-right: 50px;
 }
 header .icons span {
-    color: 1b1b2f;
+    color: #A6ABAB;
 }
 nav{
     display: grid;
@@ -80,7 +82,7 @@ body .main-fondo{
     background-position: center;
     background-image: url(../assets/img/bigstock-Real-Python-Code-Developing-Sc-217216555-630x421.jpg);
 }
-main {
+.main-index {
     display: grid;
     place-items: center;
     margin: 0;
@@ -97,9 +99,9 @@ main .card {
     border: 3px solid;
     border-image: linear-gradient(
       135deg,
-      hsl(330, 100%, 38%),
+      rgba(141, 7, 246),
       hsl(222, 99%, 100%),
-      hsl(330, 100%, 38%)
+      rgba(141, 7, 246)
     ) 1;
     display: grid;
     justify-content: center;
@@ -117,9 +119,10 @@ main .card p{
     display: grid;
 }
 .blogs-news-container {
-    background-color: #cc0e74;
+    background-color: #0029FA;
     padding: 0 50px 40px;
-    width: 100%;
+    width: auto;
+    margin-top: 10px;
 }
 .blogs-main-new {
     display: grid;
@@ -129,8 +132,65 @@ main .card p{
 .blogs-news-img-container{
     grid-column: 1;
 }
+.blogs-news-img-container img{
+    width: 85%;
+    /* height: 300px; */
 
-
+}
+.blogs-news-info-container{
+    grid-column: 2;
+}
+.blogs-news-info-container p{
+    margin-bottom: 35px;
+}
+.blogs-post-container{
+    padding: 0 50px 40px;
+}
+.blogs-post-container h3{
+    border-bottom: 1px solid #0029FA;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.blogs-button{
+    border: 3px solid;
+    border-image: linear-gradient(
+      135deg,
+      rgba(141, 7, 246),
+      hsl(222, 99%, 100%),
+      rgba(141, 7, 246)
+    ) 1;
+    font-size: 12px;
+    padding: 10px 15px;
+}
+.blogs-button:hover {
+	border: 1px solid white;
+	color: white;
+	background-color: #8D07F6;
+}
+.blogs-post-container .post-container{
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 30%;
+    margin-bottom: 50px;
+}
+.blogs-post-container .post-container p{
+    margin-bottom: 35px;
+}
+.blogs-post-container .post-container img{
+    width: 100%;
+    height: 200px;
+}
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    border-top: 35px solid #8D07F6;
+    text-align: center;
+}
+footer p {
+    color: white;
+    margin-top: 30px;
+}
 
 /* Animation */
 .card p {
@@ -159,7 +219,7 @@ main .card a {
     margin-top: 10px;
     font-family: 'Source Code Pro', monospace;  
     padding: 0.5rem 1rem;
-    border: solid 1px  hsl(330, 100%, 38%);
+    border: solid 1px  rgba(141, 7, 246);
     color: hsl(218, 84%, 90%);
     text-decoration: none;
     }
