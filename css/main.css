@@ -10,11 +10,11 @@ color: #f1d4d4 rosablanco
 body {
     margin: 0;
     padding: 0;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
     background-color: #3d3d3d;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -49,6 +49,10 @@ header .header-icons-container .icons {
 }
 header .icons span {
     color: #A6ABAB;
+}
+.grid-container{
+    max-width: 900px;
+    margin: auto;
 }
 nav{
     display: grid;
@@ -115,11 +119,28 @@ main .card p{
   font-size: 20px;
   color: white;
 }
+main .card a {
+    
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    margin-top: 10px;
+    font-family: 'Source Code Pro', monospace;  
+    padding: 0.5rem 1rem;
+    border: solid 1px  rgba(141, 7, 246);
+    color: hsl(218, 84%, 90%);
+    text-decoration: none;
+    }
 .blogs-main {
     display: grid;
 }
+.redonda img{
+    border-radius: 100px;
+    width: 100%;
+    padding-top: 15px;
+}
 .blogs-news-container {
-    background-color: #0029FA;
+    background-color: rgba(0, 41, 250, 0.7);
     padding: 0 50px 40px;
     width: auto;
     margin-top: 10px;
@@ -134,7 +155,7 @@ main .card p{
 }
 .blogs-news-img-container img{
     width: 85%;
-    /* height: 300px; */
+    height: 300px;
 
 }
 .blogs-news-info-container{
@@ -167,18 +188,21 @@ main .card p{
 	color: white;
 	background-color: #8D07F6;
 }
-.blogs-post-container .post-container{
+ .blogs-post-container .post-container{
     display: inline-block;
     padding-left: 10px;
     max-width: 30%;
     margin-bottom: 50px;
+    
 }
+
 .blogs-post-container .post-container p{
     margin-bottom: 35px;
 }
 .blogs-post-container .post-container img{
     width: 100%;
-}
+    height: 250px;
+} 
 footer{
     width: 100%;
     height: 80px;
@@ -190,12 +214,57 @@ footer p {
     color: white;
     margin-top: 30px;
 }
+.blogpost-img-container{
+    padding: 10px 50px 40px;
 
+
+}
+.blogpost-img-container img{
+    width: 100%;
+    
+}
+.blogpost-main-container{
+    font-family: 'Source Code Pro', monospace;
+    color:white;
+    padding: 0 50px 40px;
+}
+.blogpost-main-container h3{
+    border-bottom: 1px solid #0029FA;
+    padding-bottom: 15px;
+}
+.blogpost-main-container section h1{
+    font-size: 31px;
+}
+.contact-main-container{
+    background-color: #FFFF05;
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: space-around;
+}
+.contact-main-container div{
+    height: 90px;
+    margin-right: 10px;
+}
+.contact-main-container div img{
+    width: 100px;
+    padding: 40px 50px 0;
+}
+.contact-main-container div a{
+    color: black;
+    text-decoration: underline;
+
+}
+.contact-main-container .contact-left, .contact-right{
+    text-align: initial;
+}
 /* Animation */
 .card p {
     animation: animated-text 4s steps(29,end) 1s 1 normal both,
                animated-cursor 600ms steps(29,end) infinite;
   }
+
   
   /* text animation */
   
@@ -210,15 +279,4 @@ footer p {
     from{border-right-color: rgba(0,255,0,.75);}
     to{border-right-color: transparent;}
   }
-main .card a {
-    
-    text-align: center;
-    display: inline-block;
-    margin: 0;
-    margin-top: 10px;
-    font-family: 'Source Code Pro', monospace;  
-    padding: 0.5rem 1rem;
-    border: solid 1px  rgba(141, 7, 246);
-    color: hsl(218, 84%, 90%);
-    text-decoration: none;
-    }
+
